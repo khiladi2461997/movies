@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:21-jdk
 COPY --from=build /target/movies-0.0.1-SNAPSHOT.jar movies.jar
 EXPOSE 8080
-ENTRYPOINT [ "java","-jasr","movies.jar"]
+ENTRYPOINT [ "java","-jar","movies.jar"]
