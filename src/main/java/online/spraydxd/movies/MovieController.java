@@ -16,7 +16,7 @@ public class MovieController {
     private MovieService movieService;
 
     @GetMapping
-    @CrossOrigin(origins = "https://movie-ui-eight.vercel.app/")
+    //CrossOrigin(origins = "https://movie-ui-eight.vercel.app/")
     public ResponseEntity<List> getAllMovies() {
         return new ResponseEntity<List>(movieService.allMovies(), HttpStatusCode.valueOf(200));
     }
